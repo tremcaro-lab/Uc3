@@ -1,16 +1,14 @@
 nome=input("insira seu nome")
 idade=int(input("insira sua idade"))
 sexo=input("insira o sexo (masculino) ou (feminino)")
-if sexo =="masculino" or "Masculino":
-    sexo=="M"
-elif sexo=="feminino" or "Feminino":
-    sexo=="F"
+if sexo.upper =="MASCULINO":
+    sexo="M"
+elif sexo.upper=="FEMININO" :
+    sexo="F"
 else:
-    "erro"
+    sexo= "gêmero não esperado"
 
 if idade >50:
     print(f"{nome} tem {idade} anos e é experiente {sexo}")
-elif idade<50:
-    print(f"{nome} tem {idade} anos e está em treinamento {sexo}")
 else:
-    print(f"{nome} tem {idade} anos {sexo}")
+   print(f"{nome} tem {idade} anos e está em treinamento {sexo}")

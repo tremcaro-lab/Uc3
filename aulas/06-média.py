@@ -4,12 +4,14 @@ nota2=float(input('insira a nota do aluno '))
 
 media=(nota1+ nota2)/2
 
-if media>=6.5 and media<10:
-    print(f'{media} aprovado')
+if media>6.5 and media<10:
+    Situação= ('aprovado')
 elif media> 0 and media<6.5:
-    print(f'{media} reprovado')
+    situação=(' reprovado')
 else:
     print('dados incorretos')
+
+print(f"A média é {media}. O aluno está {situação}")
 
 
   
