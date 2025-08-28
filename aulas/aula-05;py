@@ -1,0 +1,26 @@
+class Praia:
+    def __init__(self, nome, distancia_do_centro, numero_de_veranistas, tipo_de_acesso):
+        """
+        Inicializa um objeto Praia com os atributos especificados.
+
+        Args:
+            nome (str): O nome da praia.
+            distancia_do_centro (float): A distância da praia ao centro da cidade (em km).
+            numero_de_veranistas (int): O número aproximado de veranistas na praia.
+            tipo_de_acesso (str): O tipo de acesso à praia (ex: "carro", "caminhada", "barco").
+        """
+        self.nome = nome
+        self.distancia_do_centro = distancia_do_centro
+        self.numero_de_veranistas = numero_de_veranistas
+        self.tipo_de_acesso = tipo_de_acesso
+
+    def __str__(self):
+        """
+        Retorna uma representação em string do objeto Praia.
+        """
+        return (f"Praia(Nome: {self.nome}, "
+                f"Distância: {self.distancia_do_centro} km, "
+                f"Veranistas: {self.numero_de_veranistas}, "
+                f"Acesso: {self.tipo_de_acesso})")
+praia1 = Praia('Praia do sol', 12.5,300,'carro')
+print(praia1)
