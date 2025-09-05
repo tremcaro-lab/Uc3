@@ -5,9 +5,6 @@ jogo.desenho()
 jogadap= int(input('digite a posição'))
 
 jogo.minhalista[jogadap]='x'
-
-jogo.desenho()
-
 jogadac= random.randint(0,8)
 jogo.minhalista[jogadac]='0'
 jogo.desenho()
