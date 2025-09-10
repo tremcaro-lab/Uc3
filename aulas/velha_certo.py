@@ -3,7 +3,7 @@ import random
 class Velha():
     def __init__(self):
         # lista
-        self.tabuleiro = [['x', 'O', 'O'], ['O', ' X', ' O'], ['X', 'O', 'X']]
+        self.tabuleiro = [[' ', ' ', ' '], [' ', '  ', '  '], [' ', ' ', ' ']]
 
     # desenho do tabuleiro
     def desenharTabuleiro(self):
@@ -32,3 +32,11 @@ class Velha():
             dicVencedor[i]=(self.tabuleiro[0][0]==self.tabuleiro[1][1]== self.tabuleiro[2][2]==i) or dicVencedor[i]
             dicVencedor[i]=(self.tabuleiro[0][2]==self.tabuleiro[1][1]== self.tabuleiro[2][0]==i) or dicVencedor[i]
         return dicVencedor
+    def verificarEspaço(self):
+        for x in range(3):
+            for y in range(3):
+              if self.tabuleiro[x][y] == ' ':
+                espaco=True
+                return espaco
+
+        return espaco

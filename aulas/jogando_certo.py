@@ -2,23 +2,28 @@ from velha_certo import Velha
 
 jogo = Velha()
 
-# Desenha o tabuleiro inicial
-jogo.desenharTabuleiro()
-
-"""
+while jogo.verificarEspaço ():
+ # Desenha o tabuleiro inicial
+ jogo.desenharTabuleiro()
+ while True:
 # Jogada do humano
-jogadaLinha = int(input('Digite a linha: '))
-jogadaColuna = int(input('Digite a coluna: '))
-jogo.tabuleiro[jogadaLinha][jogadaColuna] = 'X'
+  jogadaLinha = int(input('Digite a linha: '))
+  jogadaColuna = int(input('Digite a coluna: '))
+  if jogo.tabuleiro[jogadaLinha][jogadaColuna] == ' ':
+     jogo.tabuleiro[jogadaLinha][jogadaColuna] = 'X'
+     break
 jogo.desenharTabuleiro()
 
 # Jogada da máquina
-jogadaLinha = jogo.jogarMaquina()
-jogadaColuna = jogo.jogarMaquina()
-jogo.tabuleiro[jogadaLinha][jogadaColuna] = 'O'
-print('Máquina jogou')
+while True:
+   jogadaLinha = jogo.jogarMaquina()
+   jogadaColuna = jogo.jogarMaquina()
+   if jogo.tabuleiro[jogadaLinha][jogadaColuna] ==' ':
+      jogo.tabuleiro[jogadaLinha][jogadaColuna] = 'O'
+      print('Máquina jogou')
+      break
 jogo.desenharTabuleiro()
-"""
+
 
 resultado=jogo.verificarVencedor()
 
